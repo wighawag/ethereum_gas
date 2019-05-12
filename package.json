@@ -1,0 +1,22 @@
+{
+  "name": "ethereum_gas_tests",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "rocketh": "rocketh",
+    "test": "rocketh launch tap -T --jobs=1 test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "erc1820": "^0.0.2",
+    "ganache-core": "^2.5.5",
+    "openzeppelin-solidity": "git://github.com/OpenZeppelin/openzeppelin-solidity#v2.3.0-rc.1",
+    "rocketh": "^0.2.34",
+    "rocketh-web3": "^0.2.6",
+    "solc": "^0.5.8",
+    "tap": "^13.1.8",
+    "web3": "1.0.0-beta.33"
+  }
+}
