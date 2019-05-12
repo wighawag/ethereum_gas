@@ -4969,10 +4969,10 @@ rlp@^2.0.0:
     bn.js "^4.11.1"
     safe-buffer "^5.1.1"
 
-rocketh-web3@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/rocketh-web3/-/rocketh-web3-0.2.6.tgz#61c839c403d4305d201da68ddf072019e92513ab"
-  integrity sha512-zyMPIQh2AO5MJdRFXtggJnqMIkMRaLRd0WZ9jVtGe0mQNCrOR2e2PdYf7O5RVrifTJ9022oDL9clIlQNjeIGmQ==
+rocketh-web3@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/rocketh-web3/-/rocketh-web3-0.2.7.tgz#1e6703412a645ab3749ef5f2a126e74aa14d2e0e"
+  integrity sha512-N2yJcTA6hrsXfnsFuvDZv8LaOhTXBM9uXxcPo+EFeqjmKDsu3MEpCa2mzCJ7yIbxTgMBhHplu0pZFe5jkACKeQ==
 
 rocketh@^0.2.34:
   version "0.2.34"

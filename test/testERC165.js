@@ -4,7 +4,6 @@ const Web3 = require('web3');
 const rocketh = require('rocketh');
 const {
     tx,
-    getBalance,
     getDeployedContract,
     expectThrow,
     deploy,
@@ -13,52 +12,19 @@ const {
 const deployer = rocketh.accounts[0];
 const gas = 600000;
 
-const ERC165FullGasExample = getDeployedContract('ERC165FullGasExample');
-const ERC165Example = getDeployedContract('ERC165Example');
-const ERC165StorageExample = getDeployedContract('ERC165StorageExample');
-const Test1820Registry = getDeployedContract('Test1820Registry');
+const TestERC165 = getDeployedContract('TestERC165');
+const EmptyTestERC165 = getDeployedContract('EmptyTestERC165');
 
-tap.test('Nearly30000Gas', async(t) => {
-    t.test('asking registry for 165 interface should succeed and call should throw', async () => {
-        await expectThrow(tx({from: deployer, gas: 57411}, Test1820Registry, 'test165', ERC165FullGasExample.options.address, '0xeeeeeeee'));
+tap.test('9600 gas', async(t) => {
+
+    t.test('should throw', async () => {
+        const {contract} = await deploy({from:deployer, gas}, 'ERC165MoreGasExample', 9600);
+        await expectThrow(tx({from: deployer, gas: 34249}, TestERC165, 'test', contract.options.address, '0xeeeeeeee'));
     });
-    
+
     t.test('it works when given enough gas', async() => {
-        await expectThrow(tx({from: deployer, gas: 1000000}, Test1820Registry, 'test165', ERC165FullGasExample.options.address, '0xeeeeeeee'));
-    })
-})
+        const {contract} = await deploy({from:deployer, gas}, 'ERC165MoreGasExample', 9600);
+        await expectThrow(tx({from: deployer, gas: 1000000}, TestERC165, 'test', contract.options.address, '0xeeeeeeee'));
+    })    
 
-
-tap.test('MinimalGas', async(t) => {
-    t.test('asking registry for 165 interface should succeed and call should throw', async () => {
-        await expectThrow(tx({from: deployer, gas: 57411}, Test1820Registry, 'test165', ERC165Example.options.address, '0xeeeeeeee'));
-    });
-    
-    t.test('it works when given enough gas', async() => {
-        await expectThrow(tx({from: deployer, gas: 1000000}, Test1820Registry, 'test165', ERC165Example.options.address, '0xeeeeeeee'));
-    })
-})
-
-tap.test('StorageGas', async(t) => {
-    t.test('asking registry for 165 interface should succeed and call should throw', async () => {
-        await expectThrow(tx({from: deployer, gas: 57411}, Test1820Registry, 'test165', ERC165StorageExample.options.address, '0xeeeeeeee'));
-    });
-    
-    t.test('it works when given enough gas', async() => {
-        await expectThrow(tx({from: deployer, gas: 1000000}, Test1820Registry, 'test165', ERC165StorageExample.options.address, '0xeeeeeeee'));
-    })
-    
-})
-
-
-tap.test('HighGasLessThan30000', async(t) => {
-    t.test('asking registry for 165 interface should succeed and call should throw', async () => {
-        const {contract} = await deploy({from:deployer, gas}, 'ERC165MoreGasExample', 22000);
-        await expectThrow(tx({from: deployer, gas: 97500}, Test1820Registry, 'test165', contract.options.address, '0xeeeeeeee'));
-    });
-    
-    t.test('it works when given enough gas', async() => {
-        const {contract} = await deploy({from:deployer, gas}, 'ERC165MoreGasExample', 22000);
-        await expectThrow(tx({from: deployer, gas: 1000000}, Test1820Registry, 'test165', contract.options.address, '0xeeeeeeee'));
-    })
 });

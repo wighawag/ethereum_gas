@@ -2,16 +2,13 @@ pragma solidity 0.5.8;
 
 import "./ERC165.sol";
 
-contract TestERC165 {
+contract EmptyTestERC165 {
 
     bytes4 private constant _INTERFACE_ID_INVALID = 0xffffffff;
     bytes4 private constant _INTERFACE_ID_ERC165 = 0x01ffc9a7;
 
     function test(address to, bytes4 id) external returns (bool) {
-        if (isInterfaceSupported(to, id)) {
-            (bool success,) = to.call(abi.encodeWithSelector(id));
-            require(success, "fails");
-        }
+        isInterfaceSupported(to, id);
     }
 
     function isInterfaceSupported(address _to, bytes4 _id) internal returns (bool) {

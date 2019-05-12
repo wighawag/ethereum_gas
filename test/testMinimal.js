@@ -4,7 +4,6 @@ const Web3 = require('web3');
 const rocketh = require('rocketh');
 const {
     tx,
-    getBalance,
     getDeployedContract,
     expectThrow,
     deploy,

@@ -14,7 +14,7 @@
     "ganache-core": "^2.5.5",
     "openzeppelin-solidity": "git://github.com/OpenZeppelin/openzeppelin-solidity#v2.3.0-rc.1",
     "rocketh": "^0.2.34",
-    "rocketh-web3": "^0.2.6",
+    "rocketh-web3": "^0.2.7",
     "solc": "^0.5.8",
     "tap": "^13.1.8",
     "web3": "1.0.0-beta.33"
