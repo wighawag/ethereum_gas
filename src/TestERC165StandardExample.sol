@@ -1,6 +1,5 @@
 pragma solidity 0.5.8;
 
-import "./ERC165.sol";
 import "./ERC165Query.sol";
 
 contract TestERC165StandardExample is ERC165Query {
