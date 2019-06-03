@@ -117,9 +117,9 @@
   integrity sha1-7BIBZs4i8LE06HcPQMl80HYGj64=
 
 "@types/node@^10.0.3", "@types/node@^10.3.2":
-  version "10.14.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.6.tgz#9cbfcb62c50947217f4d88d4d274cc40c22625a9"
-  integrity sha512-Fvm24+u85lGmV4hT5G++aht2C5I4Z4dYlWZIh62FAfFO/TfzXtPpoLI6I7AuBWkIFqZCnhFOoTT7RjjaIL5Fjg==
+  version "10.14.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.8.tgz#fe444203ecef1162348cd6deb76c62477b2cc6e9"
+  integrity sha512-I4+DbJEhLEg4/vIy/2gkWDvXBOOtPKV9EnLhYjMoqxcRW+TTZtUftkHktz/a8suoD5mUL7m6ReLrkPvSsCQQmw==
 
 "@types/node@^6.0.52":
   version "6.14.6"
@@ -270,9 +270,9 @@ argparse@^1.0.7:
     sprintf-js "~1.0.2"
 
 armlet@^2.0.1:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/armlet/-/armlet-2.6.0.tgz#6b58b5eea7674a802e13f6c19dc4fefbc2965ea7"
-  integrity sha512-VnMocgMGTfEZ6EEzD/EK+XYoqPi6Ot+EWdx+uoAG0eKTgThtE0IjY8MuRAcjGGqNohYDUKy+hAwS+L0z+wDdag==
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/armlet/-/armlet-2.7.0.tgz#21c4f9884de17fd75785d8468a669c0f12b01370"
+  integrity sha512-+j89VqGIf/E9a6aBaJa1OG9AZ93OnlfBzZz76TegU40ELcHcKb5b05XU7a1xKJsikdt6Da/fRaYHQ36oyLLj9Q==
   dependencies:
     http-errors "^1.7.1"
     humanize-duration "^3.17.0"
@@ -2356,9 +2356,9 @@ ethereumjs-wallet@0.6.2:
     uuid "^3.3.2"
 
 ethers@^4.0.26:
-  version "4.0.27"
-  resolved "https://registry.yarnpkg.com/ethers/-/ethers-4.0.27.tgz#e570b0da9d805ad65c83d81919abe02b2264c6bf"
-  integrity sha512-+DXZLP/tyFnXWxqr2fXLT67KlGUfLuvDkHSOtSC9TUVG9OIj6yrG5JPeXRMYo15xkOYwnjgdMKrXp5V94rtjJA==
+  version "4.0.28"
+  resolved "https://registry.yarnpkg.com/ethers/-/ethers-4.0.28.tgz#74d9acb57f4ede3337c8d60476b38d0fe646af01"
+  integrity sha512-5JTHrPoFLqf+xCAI3pKwXSOgWBSJJoAUdPtPLr1ZlKbSKiIFMkPlRNovmZS3jhIw5sHW1YoVWOaJ6ZR2gKRbwg==
   dependencies:
     "@types/node" "^10.3.2"
     aes-js "3.0.0"
@@ -4974,10 +4974,10 @@ rocketh-web3@^0.2.7:
   resolved "https://registry.yarnpkg.com/rocketh-web3/-/rocketh-web3-0.2.7.tgz#1e6703412a645ab3749ef5f2a126e74aa14d2e0e"
   integrity sha512-N2yJcTA6hrsXfnsFuvDZv8LaOhTXBM9uXxcPo+EFeqjmKDsu3MEpCa2mzCJ7yIbxTgMBhHplu0pZFe5jkACKeQ==
 
-rocketh@^0.2.34:
-  version "0.2.34"
-  resolved "https://registry.yarnpkg.com/rocketh/-/rocketh-0.2.34.tgz#2b0216002fe6e86ebeb02a264d9c94e11e92167c"
-  integrity sha512-Y3z+KdYbwizAxOTjjGGAfHKhyi8I2+UZ3RZxbAizg4vwMY/LGbkOJCcJL99r3n0gweKcA8Llvxs/WPxhw2/Tnw==
+rocketh@^0.2.37:
+  version "0.2.37"
+  resolved "https://registry.yarnpkg.com/rocketh/-/rocketh-0.2.37.tgz#346ec8c3314b6a346223f5a43969c3b2a9b40d56"
+  integrity sha512-+i+oh2J1ERWHChGlvSNJ1ATjj4S1BcOEhgIL5N8IuytTO52h9aI/m+h+hHoKjgE6+N8fUIv/6YvjNAx3BBuUuw==
   dependencies:
     "@rauschma/stringio" "^1.4.0"
     armlet "^2.0.1"
@@ -6486,7 +6486,7 @@ web3-provider-engine@14.1.0:
 
 "web3-provider-engine@github:BitskiCo/provider-engine#master":
   version "14.1.0"
-  resolved "https://codeload.github.com/BitskiCo/provider-engine/tar.gz/cde663bcf98aa1dbedf3433f5ffb0ecdef1dc256"
+  resolved "https://codeload.github.com/BitskiCo/provider-engine/tar.gz/8e13c791da898d48407511e3af35384a885e7ec9"
   dependencies:
     async "^2.5.0"
     backoff "^2.5.0"

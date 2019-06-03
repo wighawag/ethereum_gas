@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "rocketh": "rocketh",
-    "test": "rocketh launch tap -T --jobs=1 test"
+    "test": "rocketh launch tap -T -R spec -j 1 test"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,7 @@
     "erc1820": "^0.0.2",
     "ganache-core": "^2.5.5",
     "openzeppelin-solidity": "git://github.com/OpenZeppelin/openzeppelin-solidity#v2.3.0-rc.1",
-    "rocketh": "^0.2.34",
+    "rocketh": "^0.2.37",
     "rocketh-web3": "^0.2.7",
     "solc": "^0.5.8",
     "tap": "^13.1.8",

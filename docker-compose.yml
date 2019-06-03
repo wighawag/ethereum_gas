@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dev:
+    build: ./
+    volumes:
+      - ./:/workspace
+      - /workspace/node_modules/ # do not use host node_modules
+      - /workspace/build/ # do not use host build
+      - /workspace/rocketh/node_modules/ # do not use host node_modules
+    networks:
+      - webnet
+      
+
+networks:
+  webnet:
+    driver: bridge
+
