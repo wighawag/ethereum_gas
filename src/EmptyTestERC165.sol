@@ -1,7 +1,5 @@
 pragma solidity 0.5.8;
 
-import "./ERC165.sol";
-
 contract EmptyTestERC165 {
 
     bytes4 private constant _INTERFACE_ID_INVALID = 0xffffffff;
