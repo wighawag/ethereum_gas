@@ -24,7 +24,7 @@ contract ERC165Test is Test {
     function testERC165With34249() external {
         ERC165MoreGasExample instanceOfERC165MoreGasExample = new ERC165MoreGasExample(9600);
         vm.expectRevert(bytes("fails"));
-        instanceOfERC165.test.gas(34249)(address(instanceOfERC165MoreGasExample), 0xeeeeeeee);
+        instanceOfERC165.test.gas(34249 - 21000)(address(instanceOfERC165MoreGasExample), 0xeeeeeeee);
     }
     function testERC165With1000000() external {
         ERC165MoreGasExample instanceOfERC165MoreGasExample = new ERC165MoreGasExample(9600);
@@ -36,7 +36,7 @@ contract ERC165Test is Test {
     function testStandardERC165With35000() external {
         ERC165MoreGasExample instanceOfERC165MoreGasExample = new ERC165MoreGasExample(10400);
         vm.expectRevert("fails");
-        instanceOfERC165StandardExample.testSingleCall.gas(35000)(address(instanceOfERC165MoreGasExample), 0xeeeeeeee);
+        instanceOfERC165StandardExample.testSingleCall.gas(35000 - 21000)(address(instanceOfERC165MoreGasExample), 0xeeeeeeee);
     }
     function testStandardERC165With1000000() external {
         ERC165MoreGasExample instanceOfERC165MoreGasExample = new ERC165MoreGasExample(10400);
