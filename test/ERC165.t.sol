@@ -36,7 +36,7 @@ contract ERC165Test is Test {
     function testStandardERC165With35000() external {
         ERC165MoreGasExample instanceOfERC165MoreGasExample = new ERC165MoreGasExample(10400);
         vm.expectRevert("fails");
-        instanceOfERC165StandardExample.testSingleCall.gas(3500)(address(instanceOfERC165MoreGasExample), 0xeeeeeeee);
+        instanceOfERC165StandardExample.testSingleCall.gas(35000)(address(instanceOfERC165MoreGasExample), 0xeeeeeeee);
     }
     function testStandardERC165With1000000() external {
         ERC165MoreGasExample instanceOfERC165MoreGasExample = new ERC165MoreGasExample(10400);
